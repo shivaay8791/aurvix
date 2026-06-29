@@ -7,6 +7,7 @@ export default function ResumeForm() {
   const [phone, setPhone] = useState("");
   const [skills, setSkills] = useState("");
   const [education, setEducation] = useState("");
+  const [experience, setExperience] = useState("");
 
   return (
     <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 mt-10">
