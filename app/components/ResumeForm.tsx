@@ -105,7 +105,23 @@ export default function ResumeForm() {
   value={skills}
   onChange={(e) => setSkills(e.target.value)}
   style={inputStyle}
+/>Experience
+
+<textarea
+  rows={5}
+  placeholder="Experience (Example: Network Engineer - ABC Pvt Ltd - 2 Years)"
+  value={experience}
+  onChange={(e) => setExperience(e.target.value)}
+  style={inputStyle}
 />
+      <h3
+  style={{
+    fontSize: "24px",
+    fontWeight: "bold",
+    marginTop: "20px",
+    marginBottom: "10px",
+  }}
+></h3>
 
 <button
   style={{
@@ -121,6 +137,15 @@ export default function ResumeForm() {
     marginTop: "20px",
   }}
 >
+  <h3
+  style={{
+    fontSize: "24px",
+    fontWeight: "bold",
+    marginTop: "20px",
+    marginBottom: "10px",
+  }}
+>
+</h3> 
   Generate Resume
 </button>
 
@@ -131,10 +156,14 @@ export default function ResumeForm() {
 <div
   style={{
     background: "#ffffff",
-    padding: "40px",
-    borderRadius: "20px",
+    width: "100%",
+    maxWidth: "700px",
+    minHeight: "500px",
+    padding: "30px",
+    borderRadius: "16px",
     color: "#111827",
     boxShadow: "0 15px 40px rgba(0,0,0,.15)",
+    margin: "0 auto",
   }}
 >
   <h2
@@ -210,6 +239,31 @@ export default function ResumeForm() {
       }}
     >
       {skills || "CCNA\nLinux\nNetworking"}
+
+
+
+      {/* Experience Preview */}
+<div style={{ marginTop: "40px" }}>
+  <h3
+    style={{
+      fontSize: "24px",
+      fontWeight: "bold",
+    }}
+  >
+    Experience
+  </h3>
+
+  <p
+    style={{
+      marginTop: "15px",
+      lineHeight: "30px",
+      color: "#374151",
+      whiteSpace: "pre-wrap",
+    }}
+  >
+    {experience || "Your Experience"}
+  </p>
+</div>
     </p>
   </div>
 
