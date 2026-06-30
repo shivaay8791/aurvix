@@ -4,38 +4,44 @@ export default function FeaturedTools() {
       title: "AI Resume Builder",
       desc: "Create ATS-friendly resumes in minutes.",
       icon: "📄",
+      buttonText: "Generate Resume",
     },
     {
       title: "PDF Merge",
       desc: "Merge multiple PDFs instantly.",
       icon: "📑",
+      buttonText: "Start Merging PDFs",
     },
     {
       title: "QR Code Generator",
       desc: "Generate custom QR codes.",
       icon: "📱",
+      buttonText: "Create QR Template",
     },
     {
       title: "Image Compressor",
       desc: "Compress images without quality loss.",
       icon: "🖼️",
+      buttonText: "Compress Images",
     },
     {
       title: "AI Email Writer",
       desc: "Generate professional emails using AI.",
       icon: "✉️",
+      buttonText: "Write AI Email",
     },
     {
       title: "Invoice Generator",
       desc: "Create beautiful invoices online.",
       icon: "🧾",
+      buttonText: "Generate Invoice",
     },
   ];
 
   return (
     <section className="max-w-7xl mx-auto px-6 py-24">
-      <h2 className="text-5xl font-bold text-center mb-14">
-        Popular <span className="text-cyan-400">Tools</span>
+      <h2 className="text-5xl font-bold mb-14">
+        Popular Tools
       </h2>
 
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -54,8 +60,8 @@ export default function FeaturedTools() {
               {tool.desc}
             </p>
 
-            <button className="mt-8 rounded-xl bg-cyan-500 px-5 py-3 font-semibold hover:bg-cyan-600 transition">
-              Open Tool →
+             <button className="mt-8 text-xl text-black font-extrabold rounded-3xl bg-cyan-500 px-5 py-3 hover:bg-cyan-600 transition">
+              {tool.buttonText}
             </button>
           </div>
         ))}

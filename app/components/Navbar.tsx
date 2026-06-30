@@ -1,23 +1,22 @@
+import AurvixLogo from "./AurvixLogo";
 export default function Navbar() {
+  
   return (
     <nav className="sticky top-0 z-50 backdrop-blur-xl bg-black/40 border-b border-white/10">
-      <div className="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between">
+      <div className="max-w-8xl mx-auto px-6 py-5 flex items-center justify-between">
 
         {/* Logo */}
         <div>
-          <h1 className="text-3xl font-extrabold tracking-tight">
-            <span className="text-white">Aur</span>
-            <span className="text-cyan-400">vix</span>
-          </h1>
+          <AurvixLogo />
         </div>
 
         {/* Desktop Menu */}
         <div className="hidden md:flex items-center gap-8 text-gray-300 font-medium">
-          <a href="#" className="hover:text-cyan-400 transition">Home</a>
-          <a href="#" className="hover:text-cyan-400 transition">Tools</a>
-          <a href="#" className="hover:text-cyan-400 transition">Features</a>
+          <a href="#" className="hover:text-cyan-400 transition">AI Tool Hub</a>
+          <a href="#" className="hover:text-cyan-400 transition">Workflow Templates</a>
+          <a href="#" className="hover:text-cyan-400 transition">Developer API</a>
+          <a href="#" className="hover:text-cyan-400 transition">Community Showcase</a>
           <a href="#" className="hover:text-cyan-400 transition">Pricing</a>
-          <a href="#" className="hover:text-cyan-400 transition">Contact</a>
         </div>
 
         {/* Right Buttons */}

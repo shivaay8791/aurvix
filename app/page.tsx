@@ -6,16 +6,16 @@ import Footer from "./components/Footer";
 
 export default function Home() {
   return (
-    <>
+    <div className="min-h-screen overflow-x-hidden bg-gradient-to-br from-black via-slate-950 to-gray-900 text-white">
       <Navbar />
 
-      <main className="min-h-screen bg-gradient-to-br from-black via-slate-950 to-gray-900 text-white">
+      <main>
         <Landing />
         <Stats />
         <FeaturedTools />
       </main>
 
       <Footer />
-    </>
+    </div>
   );
 }
