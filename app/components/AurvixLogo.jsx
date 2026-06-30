@@ -2,8 +2,8 @@ export default function AurvixLogo() {
   return (
     <div className="flex items-center gap-3">
       <svg
-        width="42"
-        height="42"
+        width="36"
+        height="36"
         viewBox="0 0 64 64"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
@@ -68,7 +68,7 @@ export default function AurvixLogo() {
         />
       </svg>
 
-      <h1 className="text-3xl font-bold text-white">
+      <h1 className="text-2xl font-bold text-white">
         <span className="text-white">Aur</span>
         <span className="text-cyan-400">vix</span>
       </h1>

@@ -34,33 +34,33 @@ export default function ToolFormPage({
   return (
     <main className="min-h-screen bg-gradient-to-br from-black via-slate-950 to-gray-900 text-white">
       <div className="relative overflow-hidden">
-        <div className="absolute left-1/2 top-0 h-[520px] w-[520px] -translate-x-1/2 rounded-full bg-cyan-500/20 blur-[150px]" />
-        <div className="relative mx-auto min-h-screen w-full max-w-7xl px-6 py-8">
+        <div className="absolute left-1/2 top-0 h-[520px] w-[520px] -translate-x-1/2 rounded-full bg-cyan-500/15 blur-[150px]" />
+        <div className="relative mx-auto min-h-screen w-full max-w-7xl px-6 py-7">
           <header className="flex items-center justify-between gap-4">
             <Link href="/" aria-label="Go to Aurvix home">
               <AurvixLogo />
             </Link>
             <Link
               href="/tools"
-              className="rounded-2xl border border-white/10 bg-white/10 px-5 py-3 text-sm font-semibold text-white transition hover:border-cyan-300 hover:bg-white/15"
+              className="rounded-xl border border-white/10 bg-white/10 px-4 py-2.5 text-sm font-semibold text-white transition hover:border-cyan-300 hover:bg-white/15"
             >
               Tool Hub
             </Link>
           </header>
 
-          <section className="grid gap-8 py-14 lg:grid-cols-[1fr_460px]">
+          <section className="grid gap-8 py-12 lg:grid-cols-[1fr_460px]">
             <div>
-              <p className="mb-5 w-fit rounded-full border border-cyan-400/30 bg-cyan-500/10 px-4 py-2 text-sm font-medium text-cyan-200">
+              <p className="mb-5 w-fit rounded-full border border-cyan-400/30 bg-cyan-500/10 px-4 py-2 text-xs font-medium text-cyan-200">
                 {eyebrow}
               </p>
-              <h1 className="text-4xl font-extrabold leading-tight sm:text-5xl">
+              <h1 className="text-3xl font-bold leading-tight sm:text-4xl lg:text-5xl">
                 {title}
               </h1>
-              <p className="mt-6 max-w-2xl text-base leading-8 text-gray-300 sm:text-lg">
+              <p className="mt-5 max-w-2xl text-base leading-7 text-gray-300">
                 {description}
               </p>
 
-              <div className="mt-8 space-y-5 rounded-[28px] border border-white/10 bg-white/[0.07] p-6 shadow-2xl shadow-cyan-950/30 backdrop-blur-2xl">
+              <div className="mt-8 space-y-5 rounded-2xl border border-white/10 bg-white/[0.07] p-5 shadow-2xl shadow-cyan-950/30 backdrop-blur-2xl">
                 {fields.map((field) => (
                   <label key={field.label} className="block">
                     <span className="text-sm font-medium text-gray-200">
@@ -77,7 +77,7 @@ export default function ToolFormPage({
                         }
                         placeholder={field.placeholder}
                         rows={5}
-                        className="mt-2 w-full rounded-2xl border border-white/10 bg-black/30 px-4 py-3.5 text-white outline-none transition placeholder:text-gray-600 focus:border-cyan-300 focus:ring-4 focus:ring-cyan-400/10"
+                        className="mt-2 w-full rounded-xl border border-white/10 bg-black/30 px-4 py-3 text-sm text-white outline-none transition placeholder:text-gray-600 focus:border-cyan-300 focus:ring-4 focus:ring-cyan-400/10"
                       />
                     ) : (
                       <input
@@ -90,7 +90,7 @@ export default function ToolFormPage({
                           }))
                         }
                         placeholder={field.placeholder}
-                        className="mt-2 w-full rounded-2xl border border-white/10 bg-black/30 px-4 py-3.5 text-white outline-none transition placeholder:text-gray-600 focus:border-cyan-300 focus:ring-4 focus:ring-cyan-400/10"
+                        className="mt-2 w-full rounded-xl border border-white/10 bg-black/30 px-4 py-3 text-sm text-white outline-none transition placeholder:text-gray-600 focus:border-cyan-300 focus:ring-4 focus:ring-cyan-400/10"
                       />
                     )}
                   </label>
@@ -98,9 +98,9 @@ export default function ToolFormPage({
               </div>
             </div>
 
-            <aside className="h-fit rounded-[28px] border border-white/10 bg-white/[0.07] p-6 shadow-2xl shadow-cyan-950/40 backdrop-blur-2xl">
-              <h2 className="text-2xl font-bold">{resultTitle}</h2>
-              <pre className="mt-5 whitespace-pre-wrap rounded-2xl border border-white/10 bg-black/30 p-4 text-sm leading-7 text-gray-200">
+            <aside className="h-fit rounded-2xl border border-white/10 bg-white/[0.07] p-5 shadow-2xl shadow-cyan-950/40 backdrop-blur-2xl">
+              <h2 className="text-xl font-bold">{resultTitle}</h2>
+              <pre className="mt-5 whitespace-pre-wrap rounded-xl border border-white/10 bg-black/30 p-4 text-sm leading-7 text-gray-200">
                 {result}
               </pre>
             </aside>

@@ -45,9 +45,9 @@ export default function LoginForm() {
   }
 
   return (
-    <section className="mx-auto w-full max-w-md rounded-[28px] border border-white/10 bg-white/[0.07] p-6 shadow-2xl shadow-cyan-950/40 backdrop-blur-2xl sm:p-8">
+    <section className="mx-auto w-full max-w-md rounded-2xl border border-white/10 bg-white/[0.07] p-6 shadow-2xl shadow-cyan-950/40 backdrop-blur-2xl">
       <div>
-        <h2 className="text-3xl font-bold tracking-tight">
+        <h2 className="text-2xl font-bold tracking-tight">
           {mode === "login" ? "Sign in" : "Create account"}
         </h2>
         <p className="mt-2 text-sm text-gray-400">
@@ -87,7 +87,7 @@ export default function LoginForm() {
               value={name}
               onChange={(event) => setName(event.target.value)}
               placeholder="Your name"
-              className="mt-2 w-full rounded-2xl border border-white/10 bg-black/30 px-4 py-3.5 text-white outline-none transition placeholder:text-gray-600 focus:border-cyan-300 focus:ring-4 focus:ring-cyan-400/10"
+              className="mt-2 w-full rounded-xl border border-white/10 bg-black/30 px-4 py-3 text-sm text-white outline-none transition placeholder:text-gray-600 focus:border-cyan-300 focus:ring-4 focus:ring-cyan-400/10"
             />
           </label>
         )}
@@ -99,7 +99,7 @@ export default function LoginForm() {
             value={email}
             onChange={(event) => setEmail(event.target.value)}
             placeholder="you@example.com"
-            className="mt-2 w-full rounded-2xl border border-white/10 bg-black/30 px-4 py-3.5 text-white outline-none transition placeholder:text-gray-600 focus:border-cyan-300 focus:ring-4 focus:ring-cyan-400/10"
+            className="mt-2 w-full rounded-xl border border-white/10 bg-black/30 px-4 py-3 text-sm text-white outline-none transition placeholder:text-gray-600 focus:border-cyan-300 focus:ring-4 focus:ring-cyan-400/10"
           />
         </label>
 
@@ -110,7 +110,7 @@ export default function LoginForm() {
             value={password}
             onChange={(event) => setPassword(event.target.value)}
             placeholder="Enter your password"
-            className="mt-2 w-full rounded-2xl border border-white/10 bg-black/30 px-4 py-3.5 text-white outline-none transition placeholder:text-gray-600 focus:border-cyan-300 focus:ring-4 focus:ring-cyan-400/10"
+            className="mt-2 w-full rounded-xl border border-white/10 bg-black/30 px-4 py-3 text-sm text-white outline-none transition placeholder:text-gray-600 focus:border-cyan-300 focus:ring-4 focus:ring-cyan-400/10"
           />
         </label>
 
@@ -136,7 +136,7 @@ export default function LoginForm() {
         <button
           type="submit"
           disabled={isLoading}
-          className="w-full rounded-2xl bg-gradient-to-r from-cyan-500 via-blue-600 to-fuchsia-600 px-5 py-4 font-bold text-white shadow-lg shadow-cyan-500/20 transition hover:scale-[1.01] hover:shadow-cyan-500/35 disabled:cursor-not-allowed disabled:opacity-70"
+          className="w-full rounded-xl bg-gradient-to-r from-cyan-500 via-blue-600 to-fuchsia-600 px-5 py-3 text-sm font-bold text-white shadow-lg shadow-cyan-500/20 transition hover:scale-[1.01] hover:shadow-cyan-500/35 disabled:cursor-not-allowed disabled:opacity-70"
         >
           {isLoading
             ? "Please wait..."
