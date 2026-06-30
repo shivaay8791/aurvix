@@ -1,35 +1,49 @@
+import Link from "next/link";
 import AurvixLogo from "./AurvixLogo";
+
+const navItems = [
+  { label: "AI Tool Hub", href: "/tools" },
+  { label: "Workflow Templates", href: "/templates" },
+  { label: "Developer API", href: "/developer-api" },
+  { label: "Community Showcase", href: "/community" },
+  { label: "Pricing", href: "/pricing" },
+];
+
 export default function Navbar() {
-  
   return (
-    <nav className="sticky top-0 z-50 backdrop-blur-xl bg-black/40 border-b border-white/10">
-      <div className="max-w-8xl mx-auto px-6 py-5 flex items-center justify-between">
-
-        {/* Logo */}
-        <div>
+    <nav className="sticky top-0 z-50 border-b border-white/10 bg-black/40 backdrop-blur-xl">
+      <div className="mx-auto flex max-w-8xl items-center justify-between px-6 py-4">
+        <Link href="/" aria-label="Go to Aurvix home">
           <AurvixLogo />
+        </Link>
+
+        <div className="hidden items-center gap-6 text-sm font-medium text-gray-300 md:flex">
+          {navItems.map((item) => (
+            <Link
+              key={item.href}
+              href={item.href}
+              className="transition hover:text-cyan-400"
+            >
+              {item.label}
+            </Link>
+          ))}
         </div>
 
-        {/* Desktop Menu */}
-        <div className="hidden md:flex items-center gap-8 text-gray-300 font-medium">
-          <a href="#" className="hover:text-cyan-400 transition">AI Tool Hub</a>
-          <a href="#" className="hover:text-cyan-400 transition">Workflow Templates</a>
-          <a href="#" className="hover:text-cyan-400 transition">Developer API</a>
-          <a href="#" className="hover:text-cyan-400 transition">Community Showcase</a>
-          <a href="#" className="hover:text-cyan-400 transition">Pricing</a>
-        </div>
-
-        {/* Right Buttons */}
         <div className="flex items-center gap-4">
-          <button className="hidden md:block text-gray-300 hover:text-white transition">
+          <Link
+            href="/login"
+            className="hidden text-gray-300 transition hover:text-white md:block"
+          >
             Sign In
-          </button>
+          </Link>
 
-          <button className="bg-gradient-to-r from-cyan-500 to-blue-600 px-5 py-2 rounded-xl font-semibold hover:scale-105 transition">
+          <Link
+            href="/login"
+            className="rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 px-4 py-2 text-sm font-semibold transition hover:scale-[1.02]"
+          >
             Get Started
-          </button>
+          </Link>
         </div>
-
       </div>
     </nav>
   );
